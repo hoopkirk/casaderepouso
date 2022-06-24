@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description"
+        content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+    <meta name="keywords"
+        content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+    <meta name="author" content="PIXINVENT">
+    <title>Admin</title>
+    <link rel="apple-touch-icon" href="../../admin/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../admin/app-assets/images/ico/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/vendors/css/vendors.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/css/components.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css"
+        href="../../admin/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="../../admin/app-assets/css/core/colors/palette-gradient.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="admin/assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body>
+
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <div class="wrap">
+                    <div class="loader"></div>
+                    <div class="loaderbefore"></div>
+                    <div class="circular"></div>
+                    <div class="circular another"></div>
+                    <div class="text">Procurando Entrada</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+        <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span
+                class="float-md-left d-block d-md-inline-block">Copyright &copy; 2019 <a
+                    class="text-bold-800 grey darken-2" href="https://1.envato.market/modern_admin"
+                    target="_blank">PIXINVENT</a></span><span class="float-md-right d-none d-lg-block">Hand-crafted &
+                Made with<i class="ft-heart pink"></i><span id="scroll-top"></span></span></p>
+    </footer>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../admin/app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../../admin/app-assets/vendors/js/charts/chart.min.js"></script>
+    <script src="../../admin/app-assets/vendors/js/charts/raphael-min.js"></script>
+    <script src="../../admin/app-assets/vendors/js/charts/morris.min.js"></script>
+    <script src="../../admin/app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="../../admin/app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js"></script>
+    <script src="../../admin/app-assets/data/jvector/visitor-data.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../../admin/app-assets/js/core/app-menu.js"></script>
+    <script src="../../admin/app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+
+    <script src="../../admin/app-assets/js/scripts/pages/dashboard-sales.js"></script>
+    <!-- END: Page JS-->
+
+    <style>
+        .wrap {
+            padding-right: 50px;
+            position: relative;
+            top: 150px;
+            width: 0px !important;
+            margin: 0 auto;
+        }
+
+        .loader {
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            width: 50px;
+            height: 50px;
+            border: 15px solid;
+            border-radius: 50%;
+            border-top-color: rgba(44, 44, 44, 0);
+            border-right-color: rgba(55, 55, 55, 0);
+            border-bottom-color: rgba(66, 66, 66, 0);
+            border-left-color: rgba(33, 33, 33, 0);
+            animation: loadEr 3s infinite;
+        }
+
+        @keyframes loadEr {
+            0% {
+                border-top-color: rgba(44, 44, 44, 0);
+                border-right-color: rgba(55, 55, 55, 0);
+                border-bottom-color: rgba(66, 66, 66, 0);
+                border-left-color: rgba(33, 33, 33, 0);
+
+            }
+
+            10.4% {
+                border-top-color: rgba(44, 44, 44, 0.5);
+                border-right-color: rgba(55, 55, 55, 0);
+                border-bottom-color: rgba(66, 66, 66, 0);
+                border-left-color: rgba(33, 33, 33, 0);
+            }
+
+            20.8% {
+                border-top-color: rgba(44, 44, 44, 0);
+                border-right-color: rgba(55, 55, 55, 0);
+                border-bottom-color: rgba(66, 66, 66, 0);
+                border-left-color: rgba(33, 33, 33, 0);
+            }
+
+            31.2% {
+                border-top-color: rgba(44, 44, 44, 0);
+                border-right-color: rgba(55, 55, 55, 0.5);
+                border-bottom-color: rgba(66, 66, 66, 0);
+                border-left-color: rgba(33, 33, 33, 0);
+            }
+
+            41.6% {
+                border-top-color: rgba(44, 44, 44, 0);
+                border-right-color: rgba(55, 55, 55, 0);
+                border-bottom-color: rgba(66, 66, 66, 0);
+                border-left-color: rgba(33, 33, 33, 0);
+                transform: rotate(40deg);
+            }
+
+            52% {
+                border-top-color: rgba(44, 44, 44, 0);
+                border-right-color: rgba(55, 55, 55, 0);
+                border-bottom-color: rgba(66, 66, 66, 0.5);
+                border-left-color: rgba(33, 33, 33, 0);
+            }
+
+            62.4% {
+                border-top-color: rgba(44, 44, 44, 0);
+                border-right-color: rgba(55, 55, 55, 0);
+                border-bottom-color: rgba(66, 66, 66, 0);
+                border-left-color: rgba(33, 33, 33, 0);
+            }
+
+            72.8% {
+                border-top-color: rgba(44, 44, 44, 0);
+                border-right-color: rgba(55, 55, 55, 0);
+                border-bottom-color: rgba(66, 66, 66, 0);
+                border-left-color: rgba(33, 33, 33, 0.5);
+            }
+        }
+
+        .loaderbefore {
+            width: 50px;
+            height: 50px;
+            border: 15px solid #ddd;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            z-index: 9;
+        }
+
+        .circular {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 70px;
+            height: 70px;
+            border: 20px solid;
+            border-radius: 50%;
+            border-top-color: #333;
+            border-left-color: #fff;
+            border-bottom-color: #333;
+            border-right-color: #fff;
+            opacity: 0.2;
+            animation: poof 5s infinite;
+        }
+
+        @keyframes poof {
+            0% {
+                transform: scale(1, 1) rotate(0deg);
+                opacity: 0.2;
+            }
+
+            50% {
+                transform: scale(4, 4) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .another {
+            opacity: 0.1;
+            transform: rotate(90deg);
+            animation: poofity 5s infinite;
+            animation-delay: 1s;
+        }
+
+        @keyframes poofity {
+            0% {
+                transform: scale(1, 1) rotate(90deg);
+                opacity: 0.1;
+            }
+
+            50% {
+                transform: scale(4, 4) rotate(-360deg);
+                opacity: 0;
+            }
+        }
+
+        .text {
+            text-align: center;
+            position: absolute;
+            top: 95px;
+            left: -25px;
+            font-family: Arial;
+            text-transform: uppercase;
+            color: #000;
+            animation: opaa 10s infinite;
+        }
+
+        @keyframes opaa {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 0.5
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            65% {
+                opacity: 0.3;
+            }
+
+            90% {
+                opacity: 0.8;
+            }
+        }
+    </style>
+</body>
+<!-- END: Body-->
+
+</html>

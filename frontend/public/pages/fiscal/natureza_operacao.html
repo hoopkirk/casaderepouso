@@ -1,0 +1,127 @@
+<script src="https://unpkg.com/blob-util@2.0.2/dist/blob-util.js"></script>
+<script src="../../src/const.js"></script>
+
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+
+        <div hidden class="content-body" id="formulario">
+            <div class="card">
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <form class="form">
+                            <div class="form-body">
+                                <h4 class="form-section"><i class="la la-book"></i> Natureza de Operação 2</h4>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="natureza">Natureza</label>
+                                            <input class="form-control border-primary" type="text"
+                                                placeholder="Insira o nome" name="natureza" id="natureza">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="cfop_entrada_estadual">CFOP Entrada dentro</label>
+                                            <input class="form-control border-primary" type="number" placeholder=""
+                                                name="cfop_entrada_estadual" id="cfop_entrada_estadual">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="cfop_saida_estadual">CFOP Saída dentro</label>
+                                            <input class="form-control border-primary" type="number" placeholder=""
+                                                name="cfop_saida_estadual" id="cfop_saida_estadual">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="cfop_entrada_inter_estadual">CFOP Entrada fora</label>
+                                            <input class="form-control border-primary" type="number" placeholder=""
+                                                name="cfop_entrada_inter_estadual" id="cfop_entrada_inter_estadual">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="cfop_saida_inter_estadual">CFOP Saída fora</label>
+                                            <input class="form-control border-primary" type="number" placeholder=""
+                                                name="cfop_saida_inter_estadual" id="cfop_saida_inter_estadual">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-actions text-right"> -->
+                            <div class="text-right">
+                                <!-- <button type="button" class="btn btn-warning mr-1">
+                                        <i class="ft-x"></i> Cancel
+                                    </button> -->
+                                    <button type="button" onclick="viewTabela()" class="btn btn-danger">
+                                        <i class="la la-angle-double-left"></i> Cancelar
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="la la-check-square-o"></i> Atualizar Dados
+                                    </button>                                    
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-body" id="tabela">
+            <section id="dom">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"><i class="la la-book"></i> Natureza de Operação</h4>
+                                <div class="heading-elements mt-0">
+                                    <button class="btn btn-primary btn-sm " data-toggle="modal" onclick="viewFormulario()"
+                                        data-target="#AddContactModal"><i class="d-md-none d-block ft-plus white"></i>
+                                        <span class="d-md-block d-none">Novo</span></button>
+                                </div>
+                            </div>
+                            <div class="card-content collapse show">
+                                <div class="card-body card-dashboard dataTables_wrapper dt-bootstrap">
+                                    <div class="table-responsive">
+                                        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table
+                                                        class="table table-striped table-bordered zero-configuration dataTable"
+                                                        id="DataTables_Table_0" role="grid"
+                                                        aria-describedby="DataTables_Table_0_info">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th>Natureza</th>
+                                                                <th>CFOP entrada dentro</th>
+                                                                <th>CFOP saída dentro</th>
+                                                                <th>CFOP entrada fora</th>
+                                                                <th>CFOP saída fora</th>
+                                                                <th>Ação</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="itens">
+
+
+                                                        </tbody>
+                                                        <tfoot></tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+<script src="./natureza_operacao/index.js"></script>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description"
+        content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+    <meta name="keywords"
+        content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+    <meta name="author" content="PIXINVENT">
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="dist/css/adminlte.css">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="apple-touch-icon" href="admin/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="admin/app-assets/images/ico/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/vendors/css/vendors.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/css/components.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="admin/app-assets/css/core/colors/palette-gradient.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="admin/assets/css/style.css">
+
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern vertical-collapsed-menu 2-columns   menu-expanded fixed-navbar"
+    data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- Main Sidebar Container -->
+    <aside hidden class="main-sidebar">
+        <li class="nav-item">
+            <a id="Painel" href="./pages/example/index.html" class="nav-link"></a>
+        </li>
+        <li class="nav-item">
+            <a id="Clientes" href="./pages/cadastros/clientes.html" class="nav-link"></a>
+        </li>
+        <li class="nav-item">
+            <a id="Produtos" href="./pages/cadastros/produtos.html" class="nav-link"></a>
+        </li>
+        <li class="nav-item">
+            <a id="novoPedido" href="./pages/pedidos/novo.html" class="nav-link"></a>
+        </li>
+        <li class="nav-item">
+            <a id="listapedido" href="./pages/pedidos/lista.html" class="nav-link"></a>
+        </li>                
+        <li class="nav-item">
+            <a id="Conta" href="./pages/configuracao/conta.html" class="nav-link"></a>
+        </li>
+        <li class="nav-item">
+            <a id="Home" href="./pages/dashboard/index.html" class="nav-link"></a>
+        </li>
+    </aside>
+
+    
+
+    <!-- BEGIN: Header-->
+    <nav
+        class="header-navbar navbar-expand-lg navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-dark navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mobile-menu d-lg-none mr-auto"><a
+                            class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i
+                                class="ft-menu font-large-1"></i></a></li>
+                    <li class="nav-item mr-auto"><a class="navbar-brand" href="#">
+                            <!-- <img class="brand-logo"
+                                alt="modern admin logo" src="admin/app-assets/images/logo/logo.png"> -->
+                            <h3 class="brand-text" id="user"></h3>
+                        </a></li>
+                    <li class="nav-item d-none d-lg-block nav-toggle"><a class="nav-link modern-nav-toggle pr-0"
+                            data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 white"
+                                data-ticon="ft-toggle-right" enable></i></a></li>
+                    <li class="nav-item d-lg-none"><a class="nav-link open-navbar-container" data-toggle="collapse"
+                            data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a></li>
+                </ul>
+            </div>
+            <div class="navbar-container content">
+                <div class="collapse navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav mr-auto float-left">
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand" href="#"><i
+                                    class="ficon ft-maximize"></i></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav float-right">
+
+                        <li class="dropdown dropdown-user nav-item"><a
+                                class="dropdown-toggle nav-link dropdown-user-link" href="#"
+                                data-toggle="dropdown"><span class="mr-1 user-name text-bold-700"
+                                    id="user2"></span><span class="avatar avatar-online"><img
+                                        src="admin/app-assets/images/portrait/small/avatar-s-0.png"
+                                        alt="avatar"><i></i></span></a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a onclick="document.getElementById('Conta').click()" class="dropdown-item" href="#"><i
+                                        class="ft-check-square"></i>
+                                    Conta</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" id="logout" href="#"><i
+                                        class="ft-power"></i> Sair</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <aside class="main-sidebar">
+        <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+            <div class="main-menu-content">
+                <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                    <li id="Home" class=" nav-item"><a onclick="route(this)"><i class="la la-home"></i><span
+                                class="menu-title" data-i18n="Home">Home</span></a>
+                    </li>
+                    <a hidden class="dropdown-item" href="#" data-widget="iframe-close" data-type="all">Close All</a>
+
+                    <li class="nav-item"><a href="#"><i class="la la-pencil-square"></i><span class="menu-title"
+                                data-i18n="Cadastros">Cadastros</span><span
+                                class="badge badge badge-info badge-pill float-right mr-2"></span></a>
+                        <ul class="menu-content">
+                            <li id="Clientes"><a class="menu-item" onclick="route(this)"><i></i><span
+                                        data-i18n="Clientes">Clientes</span></a>
+                            </li>
+                            <li id="Produtos"><a class="menu-item" onclick="route(this)"><i></i><span
+                                        data-i18n="Produtos">Produtos</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="#"><i class="la la-shopping-cart"></i><span class="menu-title"
+                                data-i18n="Pedidos">Reservas</span><span
+                                class="badge badge badge-info badge-pill float-right mr-2"></span></a>
+                        <ul class="menu-content">
+                            <li id="novoPedido"><a class="menu-item" onclick="route(this)"><i></i><span
+                                        data-i18n="novoPedido">Nova</span></a>
+                            </li>
+                            <li id="listapedido"><a class="menu-item" onclick="route(this)"><i></i><span
+                                        data-i18n="listapedido">Lista</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="#"><i class="la la-gear"></i><span class="menu-title"
+                                data-i18n="Configuracao">Configuração</span><span
+                                class="badge badge badge-info badge-pill float-right mr-2"></span></a>
+                        <ul class="menu-content">
+                            <li id="Conta"><a class="menu-item" onclick="route(this)"><i></i><span
+                                        data-i18n="Conta">Conta</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" nav-item"><a onclick="logout()"><i class="la la-reply-all"></i><span class="menu-title"
+                                data-i18n="Sair">Sair</span></a>
+                    </li>
+                    <li hidden class=" navigation-header"><span data-i18n="Admin Panels">Módulos</span><i
+                            class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right"
+                            data-original-title="Admin Panels"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <div class="content">
+
+        <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750"
+            style="padding: 0px !important; text-align: center;">
+            <div hidden class="nav navbar navbar-expand navbar-white navbar-light border-bottom p-0">
+                <div class="nav-item dropdown">
+                    <a class="nav-link bg-danger dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Close</a>
+                    <div class="dropdown-menu mt-0">
+                        <a class="dropdown-item" href="#" data-widget="iframe-close" data-type="all">Close All</a>
+                        <a class="dropdown-item" href="#" data-widget="iframe-close" data-type="all-other">Close All
+                            Other</a>
+                    </div>
+                </div>
+                <a class="nav-link bg-light" href="#" data-widget="iframe-scrollleft"><i
+                        class="fas fa-angle-double-left"></i></a>
+                <ul class="navbar-nav overflow-hidden" role="tablist"></ul>
+                <a class="nav-link bg-light" href="#" data-widget="iframe-scrollright"><i
+                        class="fas fa-angle-double-right"></i></a>
+                <a class="nav-link bg-light" href="#" data-widget="iframe-fullscreen"><i class="fas fa-expand"></i></a>
+            </div>
+            <div class="tab-content">
+                <div class="tab-empty">
+                    <h2 class="display-4" style="padding-top: 150px;">Bem vindo!</h2>
+                </div>
+                <div class="tab-loading">
+                    <div>
+                        <h2 class="display-4" style="padding-top: 150px;">Carregando <i class="fa fa-sync fa-spin"></i>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="admin/app-assets/vendors/js/charts/chart.min.js"></script>
+    <script src="admin/app-assets/vendors/js/charts/raphael-min.js"></script>
+    <script src="admin/app-assets/vendors/js/charts/morris.min.js"></script>
+    <script src="admin/app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="admin/app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js"></script>
+    <script src="admin/app-assets/data/jvector/visitor-data.js"></script>
+    <script src="admin/app-assets/js/core/app-menu.js"></script>
+    <script src="admin/app-assets/js/core/app.js"></script>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap-alter.js"></script>
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="dist/js/adminlte.js"></script>
+
+    <script>
+        $("#logout").on("click", function () { logout() });
+        $(document).ready(function () {
+            ajax(_BASE_URL + 'api/usuarios/check', 'POST', {}, function (res) {
+                console.log(res)
+                if (res.status && localStorage.getItem('user') != 'null') {
+                    // localStorage.setItem('user', JSON.stringify(res))
+                    console.log(JSON.parse(localStorage.getItem('user')))
+                    $('#user').text(JSON.parse(localStorage.getItem('user')).user.nome)
+
+                } else {
+                    logout()
+                }
+            })
+        });        
+    </script>
+
+    <script src="./src/const2.js"></script>
+
+</body>
+<!-- END: Body-->
+
+</html>

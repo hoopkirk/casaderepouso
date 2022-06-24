@@ -1,0 +1,123 @@
+<script src="https://unpkg.com/blob-util@2.0.2/dist/blob-util.js"></script>
+<script src="../../src/const.js"></script>
+<script src="../../src/inputmask.js"></script>
+
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+
+        <div hidden class="content-body" id="formulario">
+            <div class="card">
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <form class="form">
+                            <div class="form-body">
+                                <h4 class="form-section" id="titlePedido"><i class="la la-book"></i> Pedido detalhado
+                                </h4>
+
+
+                                <div class="card-content collapse show">
+                                    <div class="card-body card-dashboard dataTables_wrapper dt-bootstrap">
+                                        <div class="table-responsive">
+                                            <div id="DataTables_Table_0_wrapper2"
+                                                class="dataTables_wrapper dt-bootstrap4">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table
+                                                            class="table table-striped table-bordered zero-configuration2 dataTable"
+                                                            id="DataTables_Table_02" role="grid"
+                                                            aria-describedby="DataTables_Table_0_info">
+                                                            <thead>
+                                                                <tr role="row">
+                                                                    <th style="width: 20px;">ID</th>
+                                                                    <th>Descrição</th>
+                                                                    <th style="width: 100px;">Preço</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="itens2">
+
+
+                                                            </tbody>
+                                                            <tfoot></tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-actions text-right"> -->
+                            <div class="text-right">
+                                <!-- <button type="button" class="btn btn-warning mr-1">
+                                        <i class="ft-x"></i> Cancel
+                                    </button> -->
+                                <button type="button" onclick="viewTabela()" class="btn btn-info">
+                                    <i class="la la-angle-double-left"></i> Voltar
+                                </button>
+                                <button type="button" onclick="remove(0)" class="btn btn-danger">
+                                    <i class="la la-angle-double-left"></i> Cancelar Pedido
+                                </button>
+                                <button type="button" onclick="finalizar()" class="btn btn-primary">
+                                    <i class="la la-check-square-o"></i> Finalizar Pagamento
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-body" id="tabela">
+            <section id="dom">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"><i class="la la-book"></i> Todos as Reservas</h4>
+                            </div>
+                            <div class="card-content collapse show">
+                                <div class="card-body card-dashboard dataTables_wrapper dt-bootstrap">
+                                    <div class="table-responsive">
+                                        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table
+                                                        class="table table-striped table-bordered zero-configuration dataTable"
+                                                        id="DataTables_Table_0" role="grid"
+                                                        aria-describedby="DataTables_Table_0_info">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th style="width: 20px;">Nº Ped.</th>
+                                                                <th style="width: 300px;">Cliente</th>
+                                                                <th>CPF/RG</th>
+                                                                <th>Valor</th>
+                                                                <th style="width: 130px;">Data</th>
+                                                                <th>Pago</th>
+                                                                <th style="width: 55px;">Ação</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="itens">
+
+
+                                                        </tbody>
+                                                        <tfoot></tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+<script src="./lista/index.js"></script>

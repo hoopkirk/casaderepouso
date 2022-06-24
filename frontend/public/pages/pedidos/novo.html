@@ -1,0 +1,154 @@
+<script src="https://unpkg.com/blob-util@2.0.2/dist/blob-util.js"></script>
+<script src="../../src/const.js"></script>
+<script src="../../src/inputmask.js"></script>
+
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+
+
+
+        <div class="content-detached content-right">
+            <div class="content-body" id="formulario">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="form-section" id="vlr_total"> Valor Total: </h4>
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body card-dashboard dataTables_wrapper dt-bootstrap">
+                            <div class="table-responsive">
+                                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table
+                                                class="table table-striped table-bordered zero-configuration dataTable"
+                                                id="DataTables_Table_0" role="grid"
+                                                aria-describedby="DataTables_Table_0_info">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th style="width: 20px;">ID</th>
+                                                        <th>Descrição</th>
+                                                        <th style="width: 100px;">Preço</th>
+                                                        <th style="width: 55px;">Ação</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="itens">
+
+
+                                                </tbody>
+                                                <tfoot></tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-detached sidebar-left ps">
+            <div class="sidebar">
+                <div class="bug-list-sidebar-content">
+                    <!-- Predefined Views -->
+                    <div class="card">
+                        <div class="card-content collapse show">
+                            <div class="card-body">
+                                <form class="form">
+                                    <div class="form-body">
+                                        <h4 class="form-section"><i class="la la-book"></i> Nova reserva</h4>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <select class="form-control border-primary" id="select-cli"
+                                                        placeholder="Selecionar Cliente">
+                                                        <option value="">Selecione um cliente</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <select class="form-control border-primary" id="select-prod"
+                                                        placeholder="Selecionar Itens">
+                                                        <option value="">Selecione um Item</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div hidden class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="id">Id</label>
+                                                    <input required class="form-control border-primary" type="text"
+                                                        placeholder="0" name="id" id="id">
+                                                </div>
+                                            </div>
+
+                                            <div hidden class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="nome">Nome</label>
+                                                    <input required class="form-control border-primary" type="text"
+                                                        placeholder="0" name="nome" id="nome">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="preco">Preço</label>
+                                                    <input required class="form-control border-primary" type="text"
+                                                        placeholder="0" name="preco" id="preco" min="0.01">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <div class="text-left">
+                                            <button type="button" onclick="clearForm()" style="width: 100px;"
+                                                class="btn btn-danger">
+                                                <i class="la la-angle-double-left"></i> Cancelar
+                                            </button>
+                                        </div>
+                                        <div class="text-right">
+                                            <button type="submit" class="btn btn-success" style="width: 100px;">
+                                                <i class="la la-plus"></i> Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                                <div style="padding-top: 10px;">
+                                    <button onclick="finalizar()" class="btn btn-info"
+                                        style="width: 100%; height: 50px;">
+                                        <i class="la la-check-square-o"></i> Finalizar
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                </div>
+                <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script src="./novo/index.js"></script>

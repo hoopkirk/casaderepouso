@@ -1,0 +1,457 @@
+<script src="https://unpkg.com/blob-util@2.0.2/dist/blob-util.js"></script>
+<script src="../../src/const.js"></script>
+
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <div class="card">
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <form class="form">
+                            <div class="form-body">
+                                <h4 class="form-section"><i class="la la-book"></i> Emitente Fiscal</h4>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="cnpj">CNPJ</label>
+                                            <input type="text" id="cnpj" class="form-control border-primary"
+                                                placeholder="00.000.000/0000-00" name="cnpj" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="form-group">
+                                            <label class="noselect" for="" style="color: white;">Pesquisar</label>
+                                            <button onclick="consultaCNPJ()" type="button" class="btn btn-primary">
+                                                <i class="la la-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="inscricao_estadual">Inscrição Estadual</label>
+                                            <input type="text" id="inscricao_estadual"
+                                                class="form-control border-primary" placeholder=""
+                                                name="inscricao_estadual">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="noselect" for="" style="color: white;">Certificado
+                                                Digital</label>
+                                            <input type="file" name="certificado" id="certificado" class="arquivo"
+                                                accept=".bin, .pfx">
+                                            <input type="text" name="file" id="file"
+                                                class="file form-control border-primary"
+                                                placeholder="Certificado Digital" readonly="readonly">
+                                        </div>
+                                    </div>
+                                    <div hidden class="col-md-3">
+                                        <div class="form-group">
+
+                                            <textarea type="text" name="certificado" id="certificado"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="noselect" for="" style="color: white;">Pesquisar</label>
+                                        <button type="button" class="btn btnCD btn-primary">
+                                            <i class="la la-upload"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="senha">Senha</label>
+                                            <input type="password" id="senha" class="form-control border-primary"
+                                                placeholder="" name="senha">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="razao_social">Razão Social</label>
+                                            <input type="text" id="razao_social" class="form-control border-primary"
+                                                placeholder="Razão Social" name="razao_social" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="nome_fantasia">Nome Fantasia</label>
+                                            <input type="text" id="nome_fantasia" class="form-control border-primary"
+                                                placeholder="Nome Fantasia" name="nome_fantasia" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input class="form-control border-primary" type="email"
+                                                placeholder="Insira o Código do Pais" name="email" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="telefone">Telefone</label>
+                                            <input class="form-control border-primary" type="text"
+                                                placeholder="Insira o Telefone" name="telefone" id="telefone">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <h4 class="form-section"><i class="ft-mail"></i> Endereço</h4> -->
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="logradouro">Logradouro</label>
+                                            <input class="form-control border-primary" type="text" placeholder="Av."
+                                                id="logradouro" name="logradouro" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="numero">Número</label>
+                                            <input class="form-control border-primary" type="text" placeholder="S/N"
+                                                id="numero" name="numero">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="bairro">Bairro</label>
+                                            <input class="form-control border-primary" type="text"
+                                                placeholder="Insira o Bairro" id="bairro" name="bairro" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="cep">CEP</label>
+                                            <input class="form-control border-primary" type="text"
+                                                placeholder="Insira o CEP" id="cep" name="cep" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="municipio">Município</label>
+                                            <input class="form-control border-primary" type="text"
+                                                placeholder="Insira o Município" id="municipio" name="municipio"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="cod_municipio">Cod. Município</label>
+                                            <input class="form-control border-primary" type="text"
+                                                placeholder="Cod. Município" id="cod_municipio" name="cod_municipio"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="cod_uf">UF</label>
+                                            <select id="cod_uf" name="cod_uf" class="form-control border-primary"
+                                                required>
+                                                <option value="">-Selecione-</option>
+                                                <option value="11">11 - RO</option>
+                                                <option value="12">12 - AC</option>
+                                                <option value="13">13 - AM</option>
+                                                <option value="14">14 - RR</option>
+                                                <option value="15">15 - PA</option>
+                                                <option value="16">16 - AP</option>
+                                                <option value="17">17 - TO</option>
+                                                <option value="21">21 - MA</option>
+                                                <option value="22">22 - PI</option>
+                                                <option value="23">23 - CE</option>
+                                                <option value="24">24 - RN</option>
+                                                <option value="25">25 - PB</option>
+                                                <option value="26">26 - PE</option>
+                                                <option value="27">27 - AL</option>
+                                                <option value="28">28 - SE</option>
+                                                <option value="29">29 - BA</option>
+                                                <option value="31">31 - MG</option>
+                                                <option value="32">32 - ES</option>
+                                                <option value="33">33 - RJ</option>
+                                                <option value="35">35 - SP</option>
+                                                <option value="41">41 - PR</option>
+                                                <option value="42">42 - SC</option>
+                                                <option value="43">43 - RS</option>
+                                                <option value="50">50 - MS</option>
+                                                <option value="51">51 - MT</option>
+                                                <option value="52">52 - GO</option>
+                                                <option value="53">53 - DF</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="pais">País</label>
+                                            <input class="form-control border-primary" type="text"
+                                                placeholder="Insira nome do País" id="pais" name="pais" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="cod_pais">Cod. do País</label>
+                                            <input class="form-control border-primary" type="text"
+                                                placeholder="Insira o Cod. do Pais" id="cod_pais" name="cod_pais"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cst_csosn">CST/CSOSN - Padrão</label>
+                                            <select id="cst_csosn" name="cst_csosn" class="form-control border-primary"
+                                                required>
+                                                <option value="">-Selecione-</option>
+                                                <option value="00">00 - Tributa integralmente</option>
+                                                <option value="10">10 - Tributada e com cobrança do ICMS por
+                                                    substituição tributária</option>
+                                                <option value="20">20 - Com redução da Base de Calculo</option>
+
+                                                <option value="30">30 - Isenta / não tributada e com cobrança do
+                                                    ICMS por substituição tributária</option>
+                                                <option value="40">40 - Isenta</option>
+                                                <option value="41">41 - Não tributada</option>
+                                                <option value="50">50 - Com suspensão</option>
+                                                <option value="51">51 - Com diferimento</option>
+                                                <option value="60">60 - ICMS cobrado anteriormente por
+                                                    substituição tributária</option>
+                                                <option value="70">70 - Com redução da BC e cobrança do ICMS por
+                                                    substituição tributária</option>
+                                                <option value="90">90 - Outras</option>
+                                                <option value="101">101 - Tributada pelo Simples Nacional com
+                                                    permissão de crédito</option>
+                                                <option value="102">102 - Tributada pelo Simples Nacional sem
+                                                    permissão de crédito</option>
+                                                <option value="103">103 - Isenção do ICMS no Simples Nacional
+                                                    para faixa de receita bruta</option>
+                                                <option value="201">201 - Tributada pelo Simples Nacional com
+                                                    permissão de crédito e com cobrança do ICMS por
+                                                    substituição tributária</option>
+                                                <option value="202">202 - Tributada pelo Simples Nacional sem
+                                                    permissão de crédito e com cobrança do ICMS por
+                                                    substituição tributária</option>
+                                                <option value="203">203 - Isenção do ICMS no Simples Nacional
+                                                    para faixa de receita bruta e com cobrança do ICMS por
+                                                    substituição tributária</option>
+                                                <option value="300">300 - Imune</option>
+                                                <option value="400">400 - Não tributada pelo Simples
+                                                    Nacional</option>
+                                                <option value="500">500 - ICMS cobrado anteriormente por
+                                                    substituição tributária (substituído) ou por
+                                                    antecipação</option>
+                                                <option value="900">900 - Outros</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cst_cofins">CST PIS - Padrão</label>
+                                            <select id="cst_cofins" name="cst_cofins"
+                                                class="form-control border-primary" required>
+                                                <option value="">-Selecione-</option>
+                                                <option value="01">01 - Operação Tributável com Alíquota Básica
+                                                </option>
+                                                <option value="02">02 - Operação Tributável com Alíquota por Unidade
+                                                    de Medida de Produto</option>
+                                                <option value="03">03 - Operação Tributável com Alíquota por Unidade
+                                                    de Medida de Produto</option>
+                                                <option value="04">04 - Operação Tributável Monofásica – Revenda a
+                                                    Alíquota Zero</option>
+                                                <option value="05">05 - Operação Tributável por Substituição
+                                                    Tributária</option>
+                                                <option value="06">06 - Operação Tributável a Alíquota Zero</option>
+                                                <option value="07">07 - Operação Isenta da Contribuição</option>
+                                                <option value="08">08 - Operação sem Incidência da Contribuição
+                                                </option>
+                                                <option value="09">09 - Operação com Suspensão da Contribuição
+                                                </option>
+                                                <option value="49">49 - Outras Operações de Saída</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cst_pis">CST COFINS - Padrão</label>
+                                            <select id="cst_pis" name="cst_pis" class="form-control border-primary"
+                                                required>
+                                                <option value="">-Selecione-</option>
+                                                <option value="01">01 - Operação Tributável com Alíquota Básica
+                                                </option>
+                                                <option value="02">02 - Operação Tributável com Alíquota por Unidade
+                                                    de Medida de Produto</option>
+                                                <option value="03">03 - Operação Tributável com Alíquota por Unidade
+                                                    de Medida de Produto</option>
+                                                <option value="04">04 - Operação Tributável Monofásica – Revenda a
+                                                    Alíquota Zero</option>
+                                                <option value="05">05 - Operação Tributável por Substituição
+                                                    Tributária</option>
+                                                <option value="06">06 - Operação Tributável a Alíquota Zero</option>
+                                                <option value="07">07 - Operação Isenta da Contribuição
+                                                </option>
+                                                <option value="08">08 - Operação sem Incidência da Contribuição
+                                                </option>
+                                                <option value="09">09 - Operação com Suspensão da Contribuição
+                                                </option>
+                                                <option value="49">49 - Outras Operações de Saída</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cst_ipi">CST IPI - Padrão</label>
+                                            <select id="cst_ipi" name="cst_ipi" class="form-control border-primary"
+                                                required>
+                                                <option value="">-Selecione-</option>
+                                                <option value="50">50 - Saída Tributada</option>
+                                                <option value="51">51 - Saída Tributável com Alíquota Zero</option>
+                                                <option value="52">52 - Saída Isenta</option>
+                                                <option value="53">53 - Saída Não Tributada</option>
+                                                <option value="54">54 - Saída Imune</option>
+                                                <option value="55">55 - Saída com Suspensão</option>
+                                                <option value="99">99 - Outras Saídas</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="frete_padrao">Frete Padrão</label>
+                                            <select id="frete_padrao" name="frete_padrao"
+                                                class="form-control border-primary" required>
+                                                <option value="0">0 - Emitente</option>
+                                                <option value="1">1 - Destinatário</option>
+                                                <option value="2">2 - Terceiros</option>
+                                                <option value="9">9 - Sem Frete</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="tipo_pagamento">Tipo Pagamento Padrão</label>
+                                            <select id="tipo_pagamento" name="tipo_pagamento"
+                                                class="form-control border-primary" required>
+                                                <option value="01">01 - Dinheiro</option>
+                                                <option value="02">02 - Cheque</option>
+                                                <option value="03">03 - Cartão de Crédito</option>
+                                                <option value="04">04 - Cartão de Débito</option>
+                                                <option value="05">05 - Crédito Loja</option>
+                                                <option value="10">10 - Vale Aoptionmentação</option>
+                                                <option value="11">11 - Vale Refeição</option>
+                                                <option value="12">12 - Vale Presente</option>
+                                                <option value="13">13 - Vale Combustível</option>
+                                                <option value="14">14 - Dupoptioncata Mercantil</option>
+                                                <option value="15">15 - Boleto Bancário</option>
+                                                <option value="90">90 - Sem pagamento</option>
+                                                <option value="99">99 - Outros</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="natureza_operacao_pdv">Natureza de Operação PDV</label>
+                                            <select id="natureza_operacao_pdv" name="natureza_operacao_pdv" required
+                                                class="form-control border-primary">
+                                                <option value="">-Selecione-</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="numero_serie_nfe">Nº Série NF-e</label>
+                                            <input class="form-control border-primary" type="number" placeholder="0"
+                                                value="0" id="numero_serie_nfe" name="numero_serie_nfe" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="numero_serie_nfce">Nº Série NFC-e</label>
+                                            <input class="form-control border-primary" type="number" placeholder="0"
+                                                value="0" id="numero_serie_nfce" name="numero_serie_nfce" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="ultimo_numero_nfe">Ultimo Nº NF-e</label>
+                                            <input class="form-control border-primary" type="number" placeholder="0"
+                                                value="0" id="ultimo_numero_nfe" name="ultimo_numero_nfe" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="ultimo_numero_nfce">Ultimo Nº NFC-e</label>
+                                            <input class="form-control border-primary" type="number" placeholder="0"
+                                                value="0" id="ultimo_numero_nfce" name="ultimo_numero_nfce" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="ultimo_numero_cte">Ultimo Nº CT-e</label>
+                                            <input class="form-control border-primary" type="number" placeholder="0"
+                                                value="0" id="ultimo_numero_cte" name="ultimo_numero_cte" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="ultimo_numero_mdfe">Ultimo Nº MDF-e</label>
+                                            <input class="form-control border-primary" type="number" placeholder="0"
+                                                value="0" id="ultimo_numero_mdfe" name="ultimo_numero_mdfe" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="csc">CSC</label>
+                                            <input class="form-control border-primary" type="text" placeholder="0"
+                                                id="csc" name="csc" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="csc_id">CSC ID</label>
+                                            <input class="form-control border-primary" type="text" placeholder="0"
+                                                id="csc_id" name="csc_id" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-actions text-right"> -->
+                            <div class="text-right">
+                                <!-- <button type="button" class="btn btn-warning mr-1">
+                                        <i class="ft-x"></i> Cancel
+                                    </button> -->
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="la la-check-square-o"></i> Atualizar Dados
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./emitente/index.js"></script>

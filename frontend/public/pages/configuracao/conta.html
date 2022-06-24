@@ -1,0 +1,64 @@
+<script src="https://unpkg.com/blob-util@2.0.2/dist/blob-util.js"></script>
+<script src="../../src/const.js"></script>
+
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <div class="card">
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <form class="form">
+                            <div class="form-body">
+                                <h4 class="form-section"><i class="la la-book"></i> Conta de Usuário</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="usuario">Email</label>
+                                            <input disabled type="email" id="usuario" class="form-control border-primary"
+                                                placeholder="Email" name="usuario" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="senha">Senha</label>
+                                            <input type="password" id="senha" class="form-control border-primary"
+                                                placeholder="*********" name="senha" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="ativo">Ativar BOT</label>
+                                            <select id="ativo" name="ativo"
+                                                class="form-control border-primary" required>
+                                                <option value="">--Selecione--</option>
+                                                <option value="1">Ativado</option>
+                                                <option value="0">Desativado</option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-actions text-right"> -->
+                            <div class="text-right">
+                                <!-- <button type="button" class="btn btn-warning mr-1">
+                                        <i class="ft-x"></i> Cancel
+                                    </button> -->
+                                <button type="submit" class="btn btn-primary" id="saved">
+                                    <i class="la la-check-square-o"></i> Atualizar Dados
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./conta/index.js"></script>

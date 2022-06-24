@@ -1,0 +1,1 @@
+importJs('./entradas/crud.js')
