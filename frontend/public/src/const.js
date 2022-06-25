@@ -1,4 +1,4 @@
-_BASE_URL = 'http://localhost:8080/'
+_BASE_URL = 'http://159.89.92.234:8080/'
 
 var _OPTIONS_DATE = {
     timeZone: 'America/Sao_Paulo',
